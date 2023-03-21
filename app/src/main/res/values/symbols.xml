@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="symbols">
+        <item>&amp;</item>
+        <item>#</item>
+        <item>(</item>
+        <item>)</item>
+        <item>\@</item>
+        <item>!</item>
+        <item>\?</item>
+        <item>:</item>
+        <item>.</item>
+        <item>_</item>
+        <item>\"</item>
+    </string-array>
+</resources>

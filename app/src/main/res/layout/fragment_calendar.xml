@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/linearLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/search_gradient_mask"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@drawable/vertical_gradient_black_mask"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/include"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginTop="0dp" />
+
+    <include
+        android:id="@+id/include"
+        layout="@layout/view_calendar_header"
+        android:layout_width="0dp"
+        android:layout_height="131dp"
+        app:layout_constraintEnd_toEndOf="@+id/calendarView"
+        app:layout_constraintStart_toStartOf="@+id/calendarView"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.kizitonwose.calendarview.CalendarView
+        android:id="@+id/calendarView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="40dp"
+        android:layout_marginEnd="40dp"
+        app:cv_dayViewResource="@layout/item_day"
+        app:cv_inDateStyle="allMonths"
+        app:cv_monthHeaderResource="@layout/calendar_header"
+        app:cv_orientation="horizontal"
+        app:cv_outDateStyle="endOfRow"
+        app:cv_scrollMode="paged"
+        app:layout_constraintBottom_toTopOf="@+id/proceed_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/include" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/proceed_button"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginBottom="8dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:nextFocusUp="@+id/calendarView"
+        tools:text="@string/proceed"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

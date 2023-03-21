@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/timed_card"
+    android:layout_width="match_parent"
+    android:layout_height="44dp"
+    android:layout_margin="4dp"
+    android:elevation="0dp"
+    android:focusable="true"
+    android:layout_gravity="center_horizontal"
+    app:cardBackgroundColor="@color/button_background_t_w_state_new"
+    app:cardForegroundColor="@android:color/transparent"
+    app:rippleColor="@android:color/transparent"
+    app:shapeAppearance="@style/ShapeAppearance.StreamingTheme.SmallComponent"
+    app:strokeColor="@color/button_background_t_w_state_new"
+    app:strokeWidth="0dp"
+    android:layout_marginVertical="5dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/button_fill"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/background_button_fild_wite_grey"
+        android:duplicateParentState="true">
+
+        <TextView
+            android:id="@+id/timedButtonText"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="false"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline5"
+            android:textColor="@color/button_text_b_w_state_new"
+            android:textStyle="normal"
+            android:duplicateParentState="true"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/timedButtonTime"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Полный матч" />
+
+        <TextView
+            android:id="@+id/timedButtonTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="4dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline5"
+            android:textColor="@color/button_text_g_w_40_state_new"
+            app:layout_constraintBaseline_toBaselineOf="@+id/timedButtonText"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/timedButtonText"
+            tools:text="1:25:17" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

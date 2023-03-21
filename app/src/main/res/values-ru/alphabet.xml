@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string-array name="alphabet" tools:ignore="InconsistentArrays">
+        <item>а</item>
+        <item>б</item>
+        <item>в</item>
+        <item>г</item>
+        <item>д</item>
+        <item>е</item>
+        <item>ж</item>
+        <item>з</item>
+        <item>и</item>
+        <item>й</item>
+        <item>к</item>
+        <item>л</item>
+        <item>м</item>
+        <item>н</item>
+        <item>о</item>
+        <item>п</item>
+        <item>р</item>
+        <item>с</item>
+        <item>т</item>
+        <item>у</item>
+        <item>ф</item>
+        <item>х</item>
+        <item>ц</item>
+        <item>ч</item>
+        <item>ш</item>
+        <item>щ</item>
+        <item>ь</item>
+        <item>ъ</item>
+        <item>ы</item>
+        <item>э</item>
+        <item>ю</item>
+        <item>я</item>
+    </string-array>
+</resources>

@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="lang">RU</string>
+    //флаг используемого языка в приложении
+    <string name="Enter">Вход</string>
+    <string name="welcome_sign_in_to_access_your_account">Добро пожаловать! Войдите в систему для доступа к своей учетной записи.</string>
+    <string name="enter_login">Введите логин</string>
+    <string name="enter_password">Введите пароль</string>
+    <string name="to_come_in">Войти</string>
+    <string name="register_now">Зарегистрироваться</string>
+    <string name="check_in">Регистрация</string>
+    <string name="my_pref">Мои предпочтения</string>
+    <string name="apply">Применить</string>
+    <string name="hide_account">Скрыть счет</string>
+    <string name="search">Поиск</string>
+    <string name="home">Главная</string>
+    <string name="favorites">Избранное</string>
+    <string name="account">Личный кабинет</string>
+    <string name="showe_account">Показать счет</string>
+    <string name="live">Live</string>
+    <string name="all">Все</string>
+    <string name="players">Игроки</string>
+    <string name="commands">Команды</string>
+    <string name="tournaments">Турниры</string>
+    <string name="proceed">Продолжить</string>
+
+    <string name="january">Январь</string>
+    <string name="february">Февраль</string>
+    <string name="march">Март</string>
+    <string name="april">Апрель</string>
+    <string name="may">Май</string>
+    <string name="june">Июнь</string>
+    <string name="july">Июль</string>
+    <string name="august">Август</string>
+    <string name="september">Сентябрь</string>
+    <string name="october">Октябрь</string>
+    <string name="november">Ноябрь</string>
+    <string name="december">Декабрь</string>
+    <string name="statistics">Статистика</string>
+    <string name="video">Видео</string>
+    <string-array name="popup_video_names">
+        <item>Смотреть</item>
+        <item>Дополнительно</item>
+        <item>По игрокам</item>
+        <item>События матча</item>
+        <item>Языки</item>
+    </string-array>
+    <string name="teams">Команды</string>
+    <string name="table">Tаблица</string>
+    <string-array name="search_names">
+        <item>Игроки</item>
+        <item>Команды</item>
+        <item>Турниры</item>
+    </string-array>
+    <string name="watch_live_stream">Смотреть прямую трансляцию</string>
+    <string name="watch_from_the_start">Смотреть с самого начала</string>
+    <string name="continue_with">Продолжить с %s</string>
+    <string name="alert_text">К сожалению, данный матч \nнедоступен в вашей стране</string>
+    <string name="alert_title">Недоступно</string>
+    <string name="text_phone">Телефон: </string>
+    <string name="text_email">E-mail: </string>
+    <string name="text_country">Страна: </string>
+    <string name="text_subscriptions">Подписки</string>
+    <string name="text_pay_story">История платежей</string>
+    <string name="text_visibly_pay">Скрыть счет</string>
+    <string name="text_lenguage">Язык</string>
+    <string name="text_yes">Да</string>
+    <string name="text_no">Нет</string>
+    <string name="text_language">Русский</string>
+    <string name="text_exit">Выход</string>
+    <string name="text_football">Футбол</string>
+    <string name="text_hockey">Хоккей</string>
+    <string name="text_basketball">Баскетбол</string>
+    <string name="text_data_pay">Дата платежа</string>
+    <string name="text_subscribe">Подписка</string>
+    <string name="text_type">Тип</string>
+    <string name="text_sum">Сумма</string>
+    <string name="pay_story">История платежей</string>
+    <string name="text_close_app">Вы уверены, что хотите выйти из приложения?\nАвторизация будет сохранена.</string>
+    <string name="text_logout">Вы уверены, что хотите выйти из аккаунта?</string>
+    <string name="text_close_app_title">Подтверждение</string>
+    <string-array name="billing_type_names">
+        <item>Помесячно</item>
+        <item>За весь год</item>
+        <item>За просмотр</item>
+    </string-array>
+    <string name="language_selection">Выбор языка</string>
+    <string name="text_choose_quality">Выберите качество</string>
+    <string name="text_not_find_match">Матчи не найдены</string>
+    <string name="text_not_find_tour">Турниры не найдены</string>
+    <string name="text_not_find_players">Игроки не найдены</string>
+    <string name="text_not_find_teams">Команды не найдены</string>
+    <string name="wrong_login_or_password">Неверный логин или пароль!</string>
+    <string name="this_login_is_already_used">Пользователь с таким логином уже существует!</string>
+    <string name="buying_it">Купить</string>
+    <string name="returnToLive">Вернуться в LIVE</string>
+    <string name="text_chose_subscriptions">Выберите подписки</string>
+</resources>

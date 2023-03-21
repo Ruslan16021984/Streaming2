@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="4dp"
+    android:layout_marginVertical="5dp"
+    android:elevation="0dp"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/button_background_w_g_state_new"
+    app:cardForegroundColor="@android:color/transparent"
+    app:rippleColor="@android:color/transparent"
+    app:shapeAppearance="@style/ShapeAppearance.StreamingTheme.MediumComponent"
+    app:strokeColor="@color/button_background_t_w_state_new"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:duplicateParentState="true">
+
+        <TextView
+            android:id="@+id/item_billing_type_title"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="8dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="Second Test subscription" />
+
+        <TextView
+            android:id="@+id/item_billing_type_descriptions_1"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_billing_type_title"
+            tools:text="Second Test subscription" />
+
+        <TextView
+            android:id="@+id/item_billing_type_descriptions_2"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="8dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/item_billing_type_descriptions_1"
+            tools:text="Second Test subscription" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</com.google.android.material.card.MaterialCardView>

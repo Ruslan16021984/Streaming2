@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    //Lexics
+
+    <!--Account-->
+    <integer name="phone">15589</integer>
+    <integer name="e_mail">15590</integer>
+    <integer name="country">15591</integer>//страна
+    <integer name="languages">15578</integer>
+    <integer name="language">15595</integer>
+    <integer name="choose_language">1005</integer>//Выбор языка
+    <integer name="selection_language">1005</integer>//Выбор языка
+    <integer name="english">15598</integer>
+    <integer name="russian">15612</integer>
+
+    <integer name="yes">15596</integer>
+    <integer name="no">15597</integer>
+    <integer name="confirmation">15609</integer>
+
+    <integer name="exit">15599</integer>
+    <integer name="are_you_sure_exit">15607</integer>// Are you sure you want to exit the program?
+    <integer name="are_you_sure_logout">15608</integer>// Are you sure you want to log out of your account?
+
+    <!--Subscription-->
+    <integer name="choose_subscription">13563</integer>//выберите подписку
+    <integer name="subscriptions">15592</integer>//Подписки
+    <integer name="subscription">15604</integer>//Подписка
+    <integer name="basic">13327</integer>//Базовая
+    <integer name="pay_per_view">15615</integer>//Оплата за просмотр
+    <integer name="sport">12993</integer>//спорт
+    <integer name="football">15600</integer>//спорт
+    <integer name="hockey">15601</integer>//спорт
+    <integer name="basketball">15602</integer>//спорт
+
+    <integer name="payment">13015</integer>//оплата
+    <integer name="payment_history">15593</integer>//история оплаты
+    <integer name="payment_date">15603</integer>//дата оплаты
+    <integer name="type">15605</integer>
+    <integer name="sum">15606</integer>
+
+    <!--Login & Registration-->
+    <integer name="enter_email">2498</integer>//Введите ваш e-mail
+    <integer name="enter_login">15541</integer>//Введите ваш логин
+    <integer name="enter_password">15542</integer>//Введите ваш пароль
+    <integer name="wrong_login_or_password">15619</integer>//Неверный логин или пароль!
+    <integer name="login_is_already_used">15620</integer>//Этот логин уже используется
+    <integer name="email_is_wrong">12908</integer>//Некорректный формат почтового адреса
+    <integer name="email_is_blocked">12908</integer>//Данный почтовый адрес заблокирован
+    <integer name="enter">13404</integer>//Войти
+    <integer name="password">751</integer>//Пароль
+    <integer name="email">499</integer>//E-mail
+    <integer name="entrance">15539</integer>//Вход
+    <integer name="sign_in_to_access_your_account">15540</integer>//Авторизуйтесь, чтобы получить доступ к аккаунту
+    <integer name="login">15543</integer>//Логин
+    <integer name="register_now">15544</integer>//Зарегистрироваться сейчас
+    <integer name="registration">15545</integer>//Регистрация
+
+    <!--Preference-->
+    <integer name="my_preference">15546</integer>
+    <integer name="apply">15547</integer>
+
+    <integer name="hide_account">15594</integer>
+    <integer name="hide_score">15548</integer>
+    <integer name="show_score">15549</integer>
+
+    <!--Menu & Tabs-->
+    <integer name="search">15550</integer>
+    <integer name="home">15551</integer>
+    <integer name="favorites">15552</integer>
+    <integer name="account">15553</integer>
+    <integer name="live">15554</integer>
+    <integer name="all">15555</integer>
+    <integer name="players">15556</integer>
+    <integer name="teams">15557</integer>
+    <integer name="table">15580</integer>
+    <integer name="tournaments">15558</integer>
+
+    <!--Calendar-->
+    <integer name="proceed">15559</integer>
+    <integer name="month">15613</integer>
+    <integer name="year">15614</integer>
+    <integer name="january">15560</integer>
+    <integer name="february">15561</integer>
+    <integer name="march">15562</integer>
+    <integer name="april">15563</integer>
+    <integer name="may">15564</integer>
+    <integer name="june">15565</integer>
+    <integer name="july">15566</integer>
+    <integer name="august">15567</integer>
+    <integer name="september">15568</integer>
+    <integer name="october">15569</integer>
+    <integer name="november">15570</integer>
+    <integer name="december">15571</integer>
+
+    <!--Video-->
+    <integer name="statistics">15572</integer>
+    <integer name="video">15573</integer>
+    <integer name="watch">15574</integer>
+    <integer name="additionally">15575</integer>
+    <integer name="by_players">15576</integer>
+    <integer name="match_events">15577</integer>
+    <integer name="choose_quality">15616</integer>
+
+    <integer name="watch_live_stream">15584</integer>
+    <integer name="watch_from_the_start">15585</integer>
+    <integer name="continue_with">15586</integer>
+
+    <integer name="sorry_match_not_available">15587</integer>// Sorry, this match is not available in your country
+    <integer name="not_available">15588</integer>
+
+    <integer name="matches_not_found">15617</integer>
+    <integer name="tournaments_not_found">15618</integer>
+
+</resources>

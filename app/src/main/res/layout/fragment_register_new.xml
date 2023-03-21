@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/background_image"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/ic_login_background_new_2" />
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="81dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="28dp"
+        android:layout_marginTop="28dp"
+        android:backgroundTint="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_logo_new"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/tvEntrance"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="83dp"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline1"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="@string/check_in" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/loginTextField"
+        style="@style/ThemeOverlay.TextInputLayout"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="78dp"
+        android:textColorHint="@color/hint_text_field_color"
+        app:hintEnabled="false"
+        app:hintTextColor="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/tvEntrance"
+        tools:hint="@string/enter_login">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/log"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_edit_text_filld_w_smoll"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:inputType="textEmailAddress"
+            android:nextFocusUp="@+id/registerButton"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:privateImeOptions="horizontalAlignment=center"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/passwordTextField"
+        style="@style/ThemeOverlay.TextInputLayout"
+        android:layout_width="305dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+
+        android:textColorHint="@color/hint_text_field_color"
+        app:endIconMode="password_toggle"
+        app:endIconTint="@color/hint_text_field_color"
+
+        app:hintTextColor="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/loginTextField"
+        tools:hint="@string/enter_password">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/pass"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@drawable/background_edit_text_filld_w_smoll"
+            android:ellipsize="end"
+            android:focusable="true"
+            android:imeOptions="actionNext"
+            android:inputType="textPassword"
+            android:paddingHorizontal="18dp"
+            android:paddingTop="0dp"
+            android:paddingBottom="0dp"
+            android:privateImeOptions="horizontalAlignment=center"
+            android:textColor="@color/black" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <TextView
+        android:id="@+id/text_input_error"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="45dp"
+        android:layout_marginEnd="16dp"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Caption"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toTopOf="@+id/passwordTextField"
+        tools:text="@string/enter_password" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/registerButton"
+        style="@style/Button"
+        android:layout_width="wrap_content"
+        android:layout_height="45dp"
+        android:layout_marginTop="45dp"
+        android:enabled="false"
+        android:focusable="true"
+        android:insetTop="0dp"
+        android:insetBottom="0dp"
+        android:nextFocusUp="@+id/pass"
+        android:nextFocusDown="@+id/log"
+        app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+        app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+        app:layout_constraintTop_toBottomOf="@+id/passwordTextField"
+        tools:text="@string/register_now" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="330dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineEnd"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="325dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

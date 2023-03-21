@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <ImageView
+        android:id="@+id/yearLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:rotation="180"
+        android:src="@drawable/ic_back"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tint="@color/button_background_state" />
+
+    <TextView
+        android:id="@+id/yearText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline3"
+        app:layout_constraintBottom_toBottomOf="@+id/yearLeft"
+        app:layout_constraintEnd_toStartOf="@+id/yearRight"
+        app:layout_constraintStart_toEndOf="@+id/yearLeft"
+        app:layout_constraintTop_toTopOf="@+id/yearLeft"
+        tools:text="2020" />
+
+    <ImageView
+        android:id="@+id/yearRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/yearLeft"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/yearLeft"
+        app:tint="@color/button_background_state" />
+
+
+    <ImageView
+        android:id="@+id/monthLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:clickable="true"
+        android:focusable="true"
+        android:rotation="180"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/guidelineLeft"
+        app:layout_constraintTop_toBottomOf="@+id/yearLeft"
+        app:tint="@color/button_background_state" />
+
+    <TextView
+        android:id="@+id/monthText"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline3"
+        app:layout_constraintBottom_toBottomOf="@+id/monthLeft"
+        app:layout_constraintEnd_toStartOf="@+id/monthRight"
+        app:layout_constraintStart_toEndOf="@+id/monthLeft"
+        app:layout_constraintTop_toTopOf="@+id/monthLeft"
+        tools:text="Сентябрь" />
+
+    <ImageView
+        android:id="@+id/monthRight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@+id/monthLeft"
+        app:layout_constraintEnd_toStartOf="@+id/guideline3"
+        app:layout_constraintTop_toTopOf="@+id/monthLeft"
+        app:tint="@color/button_background_state" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLeft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="280dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_end="280dp"
+        android:orientation="vertical"
+        />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

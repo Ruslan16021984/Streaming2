@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="false"
+    tools:context=".ui.popupmatch.video.PopupVideoFragment">
+
+    <androidx.leanback.widget.BrowseFrameLayout
+        android:id="@+id/tab_layout_search"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:descendantFocusability="afterDescendants"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:tabIndicatorColor="@android:color/transparent">
+
+        <com.google.android.material.tabs.TabLayout
+            android:id="@+id/search_tab_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:focusable="false"
+            app:focusOutEnd="true"
+            app:focusOutFront="true"
+            app:focusOutSideEnd="true"
+            app:focusOutSideStart="true"
+            app:tabIndicatorColor="@android:color/transparent"
+            app:tabIndicatorHeight="0dp"
+            app:tabRippleColor="@color/tab_background"
+            app:tabSelectedTextColor="@color/white"
+            app:tabTextAppearance="@style/CustomTabText"
+            app:tabTextColor="@color/white40" />
+    </androidx.leanback.widget.BrowseFrameLayout>
+
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/search_pager"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:focusable="false"
+        app:focusOutEnd="false"
+        app:focusOutFront="true"
+        app:focusOutSideEnd="false"
+        app:focusOutSideStart="true"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_search" />
+
+    <ProgressBar
+        android:id="@+id/load_progress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminateTint="@color/white"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@+id/search_pager"
+        app:layout_constraintEnd_toEndOf="@+id/search_pager"
+        app:layout_constraintStart_toStartOf="@+id/search_pager"
+        app:layout_constraintTop_toBottomOf="@+id/tab_layout_search" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="false"
+        app:layout_constraintGuide_begin="30dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:focusable="false"
+        app:layout_constraintGuide_end="30dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

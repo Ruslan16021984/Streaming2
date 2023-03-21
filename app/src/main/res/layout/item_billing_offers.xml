@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/billing_offers_card"
+    android:layout_width="match_parent"
+    android:layout_height="93dp"
+    android:layout_gravity="center_horizontal"
+    android:layout_margin="4dp"
+    android:layout_marginVertical="5dp"
+    android:elevation="0dp"
+    android:focusable="true"
+    app:cardBackgroundColor="@color/button_background_w_g_state_new"
+    app:cardForegroundColor="@android:color/transparent"
+    app:rippleColor="@android:color/transparent"
+    app:shapeAppearance="@style/ShapeAppearance.StreamingTheme.MediumComponent"
+    app:strokeColor="@color/button_background_t_w_state_new"
+    app:strokeWidth="0dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/player_card_background"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:duplicateParentState="true">
+
+        <TextView
+            android:id="@+id/offer_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:duplicateParentState="true"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline5"
+            android:textColor="@color/button_text_b_w_state_new"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="League pass" />
+
+        <TextView
+            android:id="@+id/team_league_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline5"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            app:layout_constraintTop_toBottomOf="@+id/offer_title"
+            tools:text="Russian Premier League" />
+
+        <TextView
+            android:id="@+id/billing_offer_description"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="50dp"
+            android:duplicateParentState="true"
+            android:maxLines="2"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintBottom_toBottomOf="@+id/buying_button"
+            app:layout_constraintEnd_toStartOf="@+id/buying_button"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start"
+            tools:text="All matches of Orlando in season 2020-21,\nlive and on demand" />
+
+        <TextView
+            android:id="@+id/billing_offer_curency"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="2dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+            app:layout_constraintTop_toTopOf="@+id/billing_offer_price"
+            tools:text="NGN/Month" />
+
+        <TextView
+            android:id="@+id/billing_offer_price"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="4dp"
+            android:duplicateParentState="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline4"
+            android:textColor="@color/button_text_b_w_state_new"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/billing_offer_curency"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="1500" />
+
+        <TextView
+            android:id="@+id/buying_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="8dp"
+            android:background="@drawable/background_button_fild_wite20_grey20_bigradius"
+            android:duplicateParentState="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:paddingLeft="14dp"
+            android:paddingTop="8dp"
+            android:paddingRight="14dp"
+            android:paddingBottom="8dp"
+            android:text="@string/buying_it"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline5"
+            android:textColor="@color/button_text_b_w_state_new"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end" />
+
+        <!--        <com.google.android.material.button.MaterialButton-->
+        <!--            android:id="@+id/loging_button"-->
+        <!--            style="@style/ButtonBilling"-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:elevation="0dp"-->
+
+        <!--            android:duplicateParentState="true"-->
+        <!--            android:focusable="true"-->
+        <!--            android:fontFamily="@font/roboto"-->
+        <!--            android:gravity="center|center_vertical"-->
+        <!--            android:text="buying it"-->
+        <!--            android:textAllCaps="true"-->
+        <!--            app:layout_constraintBottom_toBottomOf="@+id/billing_offer_description"-->
+        <!--            app:layout_constraintEnd_toStartOf="@+id/guideline_end" />-->
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="16dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="16dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</com.google.android.material.card.MaterialCardView>

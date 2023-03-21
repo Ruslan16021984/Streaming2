@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="300dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_background_t_w_state_new"
+    android:id="@+id/item_tournament"
+    android:focusable="true">
+
+    <TextView
+        android:id="@+id/name_of_comand_text_l"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="5dp"
+        android:duplicateParentState="true"
+        android:maxLines="3"
+        android:textSize="16sp"
+        android:textColor="@color/button_text_b_w_state_new"
+        app:layout_constraintBottom_toTopOf="@+id/country_name_text_l"
+        app:layout_constraintEnd_toStartOf="@+id/check_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_chainStyle="spread"
+        app:layout_goneMarginEnd="38dp"
+        tools:text="Российская Премьер Лига" />
+
+    <ImageView
+        android:id="@+id/type_of_game_image_l"
+        android:layout_width="8dp"
+        android:layout_height="8dp"
+        android:scaleType="centerCrop"
+        app:layout_constraintBottom_toBottomOf="@+id/flag_of_command_country_image_l"
+        app:layout_constraintStart_toStartOf="@+id/name_of_comand_text_l"
+        app:layout_constraintTop_toTopOf="@+id/flag_of_command_country_image_l"
+        tools:srcCompat="@drawable/ic_footbool_new"
+        tools:ignore="contentDescription" />
+
+    <ImageView
+        android:id="@+id/flag_of_command_country_image_l"
+        android:layout_width="wrap_content"
+        android:maxWidth="@dimen/dp_16"
+        android:layout_height="@dimen/dp_10"
+        android:layout_marginStart="6dp"
+        android:foregroundGravity="center_vertical"
+        app:flow_verticalAlign="center"
+        android:scaleType="fitCenter"
+        app:layout_constraintBottom_toBottomOf="@+id/country_name_text_l"
+        app:layout_constraintStart_toEndOf="@+id/type_of_game_image_l"
+        app:layout_constraintTop_toTopOf="@+id/country_name_text_l"
+        tools:srcCompat="@drawable/ic_flag_new"
+        tools:ignore="contentDescription" />
+
+    <TextView
+        android:id="@+id/country_name_text_l"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="8dp"
+        android:duplicateParentState="true"
+        android:maxLines="1"
+        android:textSize="9sp"
+        android:textColor="@color/button_text_g_w_70_state_new"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/flag_of_command_country_image_l"
+        app:layout_constraintTop_toBottomOf="@+id/name_of_comand_text_l"
+        tools:text="Россия" />
+
+    <ImageView
+        android:id="@+id/check_image"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="11dp"
+        android:duplicateParentState="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_check_ok_b_w_new"
+        tools:ignore="contentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,272 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="223dp"
+    android:layout_height="223dp"
+    android:focusable="true"
+    android:padding="10dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@drawable/item_background"
+        android:duplicateParentState="true"
+        android:focusable="true"
+        android:padding="2dp">
+
+
+        <ImageView
+            android:id="@+id/match_imageView"
+            android:layout_width="0dp"
+            android:layout_height="124dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@tools:sample/backgrounds/scenic" />
+
+        <TextView
+            android:id="@+id/alert_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:background="@drawable/time_background"
+            android:paddingHorizontal="8dp"
+            android:paddingVertical="4dp"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="21.04.21" />
+        <!--            android:background="@drawable/alert_background"/>-->
+
+
+        <ImageView
+            android:id="@+id/logo_first_team"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEndLogoTeam"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/logo_second_team"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/guidelineStartLogoTeam"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/logo_second_team"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEndLogoTeam"
+            app:layout_constraintDimensionRatio="1:1"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/logo_first_team"
+            app:layout_constraintTop_toTopOf="@+id/guidelineStartLogoTeam"
+            tools:srcCompat="@tools:sample/avatars" />
+
+        <ImageView
+            android:id="@+id/paid_content_image"
+            android:layout_width="28dp"
+            android:layout_height="0dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEndPreviewImage"
+            app:layout_constraintDimensionRatio="h,1:1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:srcCompat="@drawable/ic_paid_content"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/first_team_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginTop="8dp"
+            android:maxWidth="148dp"
+            android:maxLines="1"
+            app:autoSizeMaxTextSize="12sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_first_team_imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/match_imageView"
+            tools:text="Orlando" />
+
+        <ImageView
+            android:id="@+id/favorite_first_team_imageView"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/first_team_textView"
+            app:layout_constraintEnd_toStartOf="@+id/first_team_score_textView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/first_team_textView"
+            app:layout_constraintTop_toTopOf="@+id/first_team_textView"
+            app:srcCompat="@drawable/ic_favorites"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/first_team_score_textView"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+            app:layout_constraintBaseline_toBaselineOf="@+id/first_team_textView"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            tools:text="522" />
+
+        <TextView
+            android:id="@+id/second_team_textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:maxWidth="148dp"
+            android:maxLines="1"
+            app:autoSizeMaxTextSize="12sp"
+            app:autoSizeMinTextSize="8sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_second_team_imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toBottomOf="@+id/first_team_textView"
+            app:layout_goneMarginEnd="0dp"
+            tools:text="Maritzburg" />
+
+        <ImageView
+            android:id="@+id/favorite_second_team_imageView"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/second_team_textView"
+            app:layout_constraintEnd_toStartOf="@+id/second_team_score_textView"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/second_team_textView"
+            app:layout_constraintTop_toTopOf="@+id/second_team_textView"
+            app:srcCompat="@drawable/ic_favorites"
+            tools:visibility="visible" />
+
+        <TextView
+            android:id="@+id/second_team_score_textView"
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:maxLines="1"
+            tools:text="6"
+            android:textAlignment="textEnd"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+            app:layout_constraintBaseline_toBaselineOf="@+id/second_team_textView"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd" />
+
+        <ImageView
+            android:id="@+id/type_of_game_image_l"
+            android:layout_width="8dp"
+            android:layout_height="8dp"
+            app:layout_constraintBottom_toBottomOf="@+id/flag_of_command_country_image_l"
+            app:layout_constraintStart_toStartOf="@+id/guidelineStart"
+            app:layout_constraintTop_toTopOf="@+id/flag_of_command_country_image_l"
+            tools:ignore="contentDescription"
+            tools:srcCompat="@drawable/ic_footbool_new" />
+
+        <ImageView
+            android:id="@+id/flag_of_command_country_image_l"
+            android:layout_width="wrap_content"
+            android:layout_height="11dp"
+            android:layout_marginStart="8dp"
+            android:scaleType="centerInside"
+            app:layout_constraintBottom_toBottomOf="@+id/tournament_name_text"
+            app:layout_constraintStart_toEndOf="@+id/type_of_game_image_l"
+            app:layout_constraintTop_toTopOf="@+id/tournament_name_text"
+            tools:ignore="contentDescription"
+            tools:srcCompat="@drawable/ic_flag_new" />
+
+        <TextView
+            android:id="@+id/tournament_name_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:maxWidth="128dp"
+            android:maxLines="2"
+            app:autoSizeMaxTextSize="9sp"
+            app:autoSizeMinTextSize="6sp"
+            app:autoSizeStepGranularity="1sp"
+            app:autoSizeTextType="uniform"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Body2"
+            android:textColor="@color/white70"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/favorite_imageView"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toEndOf="@+id/flag_of_command_country_image_l"
+            app:layout_constraintTop_toBottomOf="@+id/second_team_textView"
+            app:layout_goneMarginEnd="0dp"
+            tools:text="Россия" />
+
+        <ImageView
+            android:id="@+id/favorite_imageView"
+            android:layout_width="7dp"
+            android:layout_height="7dp"
+            android:layout_marginStart="4dp"
+            android:visibility="gone"
+            app:layout_constraintBottom_toBottomOf="@+id/tournament_name_text"
+            app:layout_constraintEnd_toEndOf="@+id/guidelineEnd"
+            app:layout_constraintEnd_toStartOf="@+id/guidelineEnd"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tournament_name_text"
+            app:layout_constraintTop_toTopOf="@+id/tournament_name_text"
+            app:srcCompat="@drawable/ic_favorites"
+            tools:visibility="visible" />
+
+        <FrameLayout
+            android:id="@+id/messageContainer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/guidelineEndPreviewImage"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/match_imageView" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStart"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="8dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineStartLogoTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="37dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEndLogoTeam"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="102dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guidelineEndPreviewImage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="124dp" />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

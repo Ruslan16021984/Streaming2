@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:alpha=".5"
+        android:textSize="12sp"
+        android:text="Sec before"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/secBefore"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/secBefore" />
+
+    <TextView
+        android:id="@+id/secBefore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLength="2"
+        android:text="0"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView4"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:alpha=".5"
+        android:textSize="12sp"
+        android:text="Sec after"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/secBefore"
+        app:layout_constraintStart_toEndOf="@+id/secBefore"
+        app:layout_constraintTop_toTopOf="@+id/secBefore" />
+
+    <TextView
+        android:id="@+id/secAfter"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:maxLength="2"
+        android:text="0"
+        android:paddingHorizontal="16dp"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        app:layout_constraintStart_toEndOf="@+id/textView5"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <LinearLayout
+        android:id="@+id/keyboard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/secBefore">
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="1"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="2"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="3"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="4"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="25dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:gravity="center"
+            android:text="5"
+            android:textColor="@color/small_key"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="6"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="7"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="8"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="9"
+            android:textColor="@color/small_key"
+            android:textSize="20sp" />
+
+        <TextView
+            android:layout_width="30dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:gravity="center"
+            android:text="0"
+            android:textColor="@color/small_key"
+            android:textSize="20sp"  />
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/background_smal_kay"
+            android:clickable="true"
+            android:focusable="true"
+            android:padding="6dp"
+            android:src="@drawable/ic_erase"
+            app:layout_constraintDimensionRatio="1:1"
+            app:tint="@color/small_key" />
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

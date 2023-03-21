@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/tabWatchFragment"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nextFocusDown="@+id/buttonFullMatch"
+    tools:context=".ui.popupmatch.video.watch.TabWatchFragment">
+
+    <androidx.leanback.widget.VerticalGridView
+        android:id="@+id/tab_watch_recycler"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:focusOutEnd="false"
+        app:focusOutFront="true"
+        app:focusOutSideEnd="false"
+        app:focusOutSideStart="false"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_end"
+        app:layout_constraintStart_toStartOf="@+id/guideline_start"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:itemCount="4"
+        tools:listitem="@layout/item_timed_button" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_start"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="329dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_end"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="329dp" />
+</androidx.constraintlayout.widget.ConstraintLayout>

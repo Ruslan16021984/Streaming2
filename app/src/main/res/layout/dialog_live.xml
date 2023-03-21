@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="@drawable/home_background"
+    android:gravity="center">
+
+    <TextView
+        android:id="@+id/tvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/dp_36"
+        tools:text="Orlando - Maritzburg"
+        android:textColor="@color/white"
+        android:textSize="32sp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toTopOf="@+id/tvWatchLive"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWatchLive"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/round_background_t_w_state_selected"
+        android:drawablePadding="10dp"
+        android:focusable="true"
+        android:includeFontPadding="false"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        tools:text="@string/watch_live_stream"
+        android:textColor="@drawable/background_text_dialog_live"
+        android:textSize="24sp"
+        app:drawableEndCompat="@drawable/ic_live"
+        app:layout_constraintBottom_toTopOf="@+id/tvWatchFromStart"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/tvWatchFromStart"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_36"
+        android:background="@drawable/round_background_t_w_state_selected"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        tools:text="@string/watch_from_the_start"
+        android:textColor="@drawable/background_text_dialog_live"
+        android:textSize="24sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/tvContinueWatch"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_background_t_w_state_selected"
+        android:focusable="true"
+        android:paddingHorizontal="16dp"
+        android:paddingVertical="4dp"
+        android:textColor="@drawable/background_text_dialog_live"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tvWatchFromStart"
+        tools:text="Continue with 00:00"/>
+
+    <androidx.constraintlayout.widget.Group
+        android:id="@+id/start_group"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:visibility="visible"
+        app:constraint_referenced_ids="tvTitle, tvWatchLive, tvWatchFromStart, tvContinueWatch" />
+
+    <com.google.android.exoplayer2.ui.PlayerView
+        android:background="@color/black"
+        android:id="@+id/live_video_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        app:resize_mode="zoom"
+        android:focusable="true"
+        app:use_controller="true"
+        app:controller_layout_id="@layout/custom_playback_control" />
+
+    <ProgressBar
+        android:id="@+id/progress_buffering_live"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:indeterminate="true"
+        android:visibility="invisible"
+        android:indeterminateTint="@color/white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingVertical="12dp">
+
+    <!--    <LinearLayout-->
+    <!--        android:paddingStart="14dp"-->
+    <!--        android:id="@+id/menuAccount"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:background="@drawable/menu_item_state"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingVertical="4dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toTopOf="parent">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/accountIcon"-->
+    <!--            android:layout_width="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_height="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:src="@drawable/ic_avatar"-->
+    <!--            app:tint="@color/menu_item_state_icon" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/accountText"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Аккаунт"-->
+    <!--            android:textColor="@color/menu_item_state_text"-->
+    <!--            app:layout_constraintStart_toEndOf="@+id/accountIcon" />-->
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:paddingStart="14dp"-->
+    <!--        android:id="@+id/menuSearch"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:layout_marginTop="25dp"-->
+    <!--        android:background="@drawable/menu_item_state"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingVertical="4dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/menuAccount">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iconSearch"-->
+    <!--            android:layout_width="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_height="@dimen/small_menu_icon_size"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:src="@drawable/ic_search"-->
+    <!--            app:tint="@color/menu_item_state_icon" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/searchText"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Поиск"-->
+    <!--            android:textColor="@color/menu_item_state_text" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:paddingStart="14dp"-->
+    <!--        android:id="@+id/menuHome"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:background="@drawable/menu_item_state"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingVertical="4dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/menuSearch">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iconHome"-->
+    <!--            android:layout_width="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_height="@dimen/small_menu_icon_size"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:src="@drawable/ic_home"-->
+    <!--            app:tint="@color/menu_item_state_icon" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/homeText"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Главная"-->
+    <!--            android:textColor="@color/menu_item_state_text" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:paddingStart="14dp"-->
+    <!--        android:id="@+id/menuFavorites"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:background="@drawable/menu_item_state"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:nextFocusDown="@id/menuSettings"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingVertical="4dp"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent"-->
+    <!--        app:layout_constraintTop_toBottomOf="@+id/menuHome">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iconFavorites"-->
+    <!--            android:layout_width="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_height="21dp"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:src="@drawable/ic_favorites"-->
+    <!--            app:tint="@color/menu_item_state_icon" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/favoritesText"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Избранное"-->
+    <!--            android:textColor="@color/menu_item_state_text" />-->
+
+    <!--    </LinearLayout>-->
+
+    <!--    <LinearLayout-->
+    <!--        android:paddingStart="14dp"-->
+    <!--        android:id="@+id/menuSettings"-->
+    <!--        android:layout_width="0dp"-->
+    <!--        android:layout_height="40dp"-->
+    <!--        android:background="@drawable/menu_item_state"-->
+    <!--        android:focusable="true"-->
+    <!--        android:gravity="center_vertical"-->
+    <!--        android:nextFocusUp="@id/menuFavorites"-->
+    <!--        android:orientation="horizontal"-->
+    <!--        android:paddingVertical="4dp"-->
+    <!--        app:layout_constraintBottom_toBottomOf="parent"-->
+    <!--        app:layout_constraintEnd_toEndOf="parent"-->
+    <!--        app:layout_constraintHorizontal_bias="0.0"-->
+    <!--        app:layout_constraintStart_toStartOf="parent">-->
+
+    <!--        <ImageView-->
+    <!--            android:id="@+id/iconSettings"-->
+    <!--            android:layout_width="@dimen/big_menu_icon_size"-->
+    <!--            android:layout_height="@dimen/small_menu_icon_size"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:src="@drawable/ic_settings"-->
+    <!--            app:tint="@color/menu_item_state_icon" />-->
+
+    <!--        <TextView-->
+    <!--            android:id="@+id/settingsText"-->
+    <!--            android:layout_width="wrap_content"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginStart="12dp"-->
+    <!--            android:duplicateParentState="true"-->
+    <!--            android:singleLine="true"-->
+    <!--            android:text="Настройки"-->
+    <!--            android:textColor="@color/menu_item_state_text" />-->
+
+    <!--    </LinearLayout>-->
+
+</androidx.constraintlayout.widget.ConstraintLayout>

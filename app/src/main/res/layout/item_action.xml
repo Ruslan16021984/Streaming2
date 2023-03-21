@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingVertical="3dp"
+    android:paddingEnd="20dp"
+    xmlns:tools="http://schemas.android.com/tools">
+<CheckBox
+    android:id="@+id/chackbox"
+    android:layout_width="match_parent"
+    android:layout_height="35dp"
+    android:textSize="12dp"
+    android:button="@null"
+
+    android:gravity="center_vertical"
+    android:paddingHorizontal="16dp"
+    android:ellipsize="end"
+    android:lines="1"
+    android:checked="true"
+    android:textStyle="bold"
+    android:background="@drawable/action_chackbox_background"
+    tools:text="Голы"
+    android:textColor="@color/button_text_b_w_state_new"/>
+</LinearLayout>

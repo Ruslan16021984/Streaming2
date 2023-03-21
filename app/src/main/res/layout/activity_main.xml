@@ -1,0 +1,658 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mainMotion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/activity_main_scene"
+    tools:context=".ui.main.MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/topLayout"
+        android:layout_width="match_parent"
+        android:layout_height="124dp"
+        android:background="@drawable/vertical_gradient_black_mask"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/score_button"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:checkable="true"
+            app:icon="@drawable/button_score"
+            app:iconGravity="start"
+            app:iconSize="15dp"
+            app:layout_constraintBottom_toBottomOf="@+id/preferences_button"
+            app:layout_constraintEnd_toStartOf="@+id/preferences_button"
+            app:layout_constraintTop_toTopOf="@+id/preferences_button"
+            tools:text="@string/hide_account" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/preferences_button"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="24dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="7dp"
+            app:icon="@drawable/ic_preferences_new"
+            app:iconGravity="start"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calendar_left"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            app:icon="@drawable/ic_left"
+            app:iconGravity="start"
+            app:iconSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/day_of_weektext_text"
+            app:layout_constraintEnd_toStartOf="@id/guideline_left"
+            app:layout_constraintTop_toTopOf="@+id/data_text" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/calendar_right"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="30dp"
+            android:layout_height="0dp"
+            android:paddingLeft="7dp"
+            android:paddingRight="5dp"
+            app:icon="@drawable/ic_right"
+            app:iconGravity="start"
+            app:iconSize="18dp"
+            app:layout_constraintBottom_toBottomOf="@+id/day_of_weektext_text"
+            app:layout_constraintStart_toStartOf="@id/guideline_right"
+            app:layout_constraintTop_toTopOf="@+id/data_text" />
+
+        <TextView
+            android:id="@+id/year_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            style="@style/TextStyle"
+            android:textColor="@color/menu_item_state_text"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline4"
+            app:layout_constraintBottom_toTopOf="@+id/data_text"
+            app:layout_constraintEnd_toEndOf="@+id/day_of_weektext_text"
+            app:layout_constraintStart_toStartOf="@+id/day_of_weektext_text"
+            tools:text="2021" />
+
+        <TextView
+            android:id="@+id/data_text"
+            style="@style/TextStyle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/background_text_filld_w_large"
+            android:paddingHorizontal="18dp"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline3"
+            android:textColor="@color/menu_item_state_text"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toTopOf="@+id/day_of_weektext_text"
+            app:layout_constraintEnd_toEndOf="@+id/day_of_weektext_text"
+            app:layout_constraintStart_toStartOf="@+id/day_of_weektext_text"
+            tools:text="19 января" />
+
+        <TextView
+            android:id="@+id/day_of_weektext_text"
+            style="@style/TextStyle"
+            android:paddingHorizontal="18dp"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline3"
+            app:layout_constraintBottom_toTopOf="@id/guideline"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:layout_editor_absoluteY="31dp"
+            tools:text="Понедельник" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/main_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="year_text,score_button, preferences_button, calendar_left, calendar_right, data_text, day_of_weektext_text" />
+
+        <ImageView
+            android:id="@+id/tournament_logo_image"
+            android:layout_width="97dp"
+            android:layout_height="97dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/tournament_title_text"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintHorizontal_chainStyle="packed"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="1.0"
+            tools:srcCompat="@drawable/mock_tournament" />
+
+        <TextView
+            android:id="@+id/tournament_title_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline3"
+            app:layout_constraintBottom_toTopOf="@+id/country_name_text_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/tournament_logo_image"
+            app:layout_constraintTop_toTopOf="@+id/tournament_logo_image"
+            app:layout_constraintVertical_chainStyle="packed"
+            tools:text="Российская премьер-лига" />
+
+        <ImageView
+            android:id="@+id/flag_of_command_country_image_l"
+            android:layout_width="20dp"
+            android:layout_height="0dp"
+            android:layout_marginStart="16dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="@+id/country_name_text_l"
+            app:layout_constraintStart_toEndOf="@+id/tournament_logo_image"
+            app:layout_constraintTop_toTopOf="@+id/country_name_text_l"
+            tools:ignore="contentDescription"
+            tools:srcCompat="@drawable/ic_flag_new" />
+
+        <TextView
+            android:id="@+id/country_name_text_l"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp"
+            android:layout_marginTop="8dp"
+            android:maxLines="1"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline4"
+            app:layout_constraintBottom_toBottomOf="@+id/tournament_logo_image"
+            app:layout_constraintStart_toEndOf="@+id/flag_of_command_country_image_l"
+            app:layout_constraintTop_toBottomOf="@+id/tournament_title_text"
+            tools:text="Россия" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/favorites_button"
+            style="@style/ButtonOutlinedTransparentButtonIcon"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginEnd="30dp"
+            android:focusable="true"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            tools:text="@string/favorites"
+            app:icon="@drawable/ic_star_outline"
+            app:iconGravity="textStart"
+            app:iconSize="17dp"
+            app:layout_constraintBottom_toBottomOf="@+id/country_name_text_l"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/tournament_title_text" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/tournament_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="tournament_logo_image, tournament_title_text, flag_of_command_country_image_l, country_name_text_l, favorites_button" />
+
+        <ImageView
+            android:id="@+id/logo_first_team"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/guideline_end_first_team"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/mock_tournament" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/name_first_team"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:checkable="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_first_team"
+            app:layout_constraintEnd_toStartOf="@+id/logo_first_team"
+            app:layout_constraintTop_toTopOf="@+id/logo_first_team"
+            tools:text="ros" />
+
+        <ImageView
+            android:id="@+id/logo_second_team"
+            android:layout_width="45dp"
+            android:layout_height="45dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/guideline_start_second_team"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:srcCompat="@drawable/mock_tournament" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/name_second_team"
+            style="@style/ButtonTransparentNoOutlined"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:focusable="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="@+id/logo_second_team"
+            app:layout_constraintStart_toEndOf="@+id/logo_second_team"
+            app:layout_constraintTop_toTopOf="@+id/logo_second_team"
+            tools:text="DOR" />
+
+        <TextView
+            android:id="@+id/score_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAllCaps="true"
+            android:textAppearance="@style/TextAppearance.StreamingTheme.Headline2"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/logo_second_team"
+            app:layout_constraintStart_toEndOf="@+id/logo_first_team"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="3-2" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/statistics_button"
+            style="@style/ButtonOutlinedTransparentButton"
+            android:layout_width="wrap_content"
+            android:layout_height="35dp"
+            android:layout_marginEnd="50dp"
+            android:focusable="true"
+            android:insetTop="0dp"
+            android:insetBottom="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            tools:text="@string/statistics" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/popup_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="logo_first_team, name_first_team, logo_second_team, name_second_team, score_text, statistics_button" />
+
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="108dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_left"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="362dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_right"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="362dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_first_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_begin="388dp" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_start_second_team"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            app:layout_constraintGuide_end="388dp" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/background_layout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/profile_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="search_background, search_gradient_mask,profile_name"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/profile_lang_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="main_background, search_gradient_mask"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/profile_subscriptions_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="search_background, search_gradient_mask, tvSubscriptions, button_subscriptions_football, button_subscriptions_basketball, button_subscriptions_hockey"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/profile_pay_history_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="search_background, search_gradient_mask, tvPaymentData, tvSubscribe, tvType, tvSum, tvPaymentHistory, view2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/main_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="124dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="0dp"
+            app:srcCompat="@drawable/home_background" />
+
+        <ImageView
+            android:id="@+id/search_background"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_marginTop="70dp"
+            android:scaleType="centerCrop"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="0dp"
+            app:srcCompat="@drawable/home_background" />
+
+        <ImageView
+            android:id="@+id/search_gradient_mask"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:background="@drawable/vertical_gradient_black_mask"
+            app:layout_constraintBottom_toTopOf="@+id/search_background"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_goneMarginTop="0dp" />
+
+        <TextView
+            android:id="@+id/tvSubscriptions"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            tools:text="@string/text_subscriptions"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/profile_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"
+            android:textColor="@color/white"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_end_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_subscriptions_football"
+            style="@style/ButtonTransparentNoOutlinedProfileSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="200dp"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            tools:text="@string/text_football"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_end_search"
+            app:layout_constraintEnd_toStartOf="@+id/button_subscriptions_hockey"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_subscriptions_hockey"
+            style="@style/ButtonTransparentNoOutlinedProfileSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center|center_vertical"
+            tools:text="@string/text_hockey"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_end_search"
+            app:layout_constraintEnd_toEndOf="@+id/tvSubscriptions"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toStartOf="@+id/tvSubscriptions" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/button_subscriptions_basketball"
+            style="@style/ButtonTransparentNoOutlinedProfileSub"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:background="@android:color/transparent"
+            android:button="@null"
+            android:clickable="true"
+            android:focusable="true"
+            android:fontFamily="@font/roboto"
+            android:gravity="center|center_vertical"
+            tools:text="@string/text_basketball"
+            android:textAllCaps="false"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toBottomOf="@id/guideline_end_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.5"
+            app:layout_constraintStart_toEndOf="@+id/button_subscriptions_hockey" />
+
+        <TextView
+            android:id="@+id/tvPaymentHistory"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            tools:text="@string/pay_story"
+            android:textColor="@color/white"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvPaymentData"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="60dp"
+            android:layout_marginBottom="20dp"
+            tools:text="@string/text_data_pay"
+            android:textAllCaps="true"
+            android:textColor="@color/white40"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/tvSubscribe"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="73dp"
+            android:layout_marginBottom="20dp"
+            tools:text="@string/text_subscribe"
+            android:textAllCaps="true"
+            android:textColor="@color/white40"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintStart_toEndOf="@+id/tvPaymentData" />
+
+        <TextView
+            android:id="@+id/tvType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="200dp"
+            android:layout_marginBottom="20dp"
+            tools:text="@string/text_type"
+            android:textAllCaps="true"
+            android:textColor="@color/white40"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toStartOf="@+id/tvSum" />
+
+        <TextView
+            android:id="@+id/tvSum"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="140dp"
+            android:layout_marginBottom="20dp"
+            tools:text="@string/text_sum"
+            android:textAllCaps="true"
+            android:textColor="@color/white40"
+            app:layout_constraintBottom_toTopOf="@+id/view2"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/white"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_end_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/search_text_field"
+            style="@style/ThemeOverlay.TextInputLayout"
+            android:layout_width="305dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="5dp"
+            android:textColorHint="@color/hint_text_field_color"
+            app:hintTextColor="@android:color/transparent"
+            app:layout_constraintBottom_toTopOf="@+id/guideline_end_search"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:startIconDrawable="@drawable/ic_search2">
+            <!--            android:hint="@string/search"-->
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/search_text"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:background="@drawable/background_edit_text_filld_w_smoll"
+                android:ellipsize="end"
+                android:focusable="true"
+                android:imeOptions="actionSearch"
+                android:inputType="text"
+                android:paddingHorizontal="18dp"
+                android:paddingTop="0dp"
+                android:paddingBottom="0dp"
+                android:privateImeOptions="horizontalAlignment=center"
+                android:textColor="@color/black" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <ImageView
+            android:id="@+id/logo_imageView"
+            android:layout_width="81dp"
+            android:layout_height="19dp"
+            android:layout_marginStart="28dp"
+            android:layout_marginTop="28dp"
+            android:backgroundTint="@color/white"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/ic_logo_new"
+            tools:ignore="contentDescription" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/main_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="visible"
+            app:constraint_referenced_ids="main_background" />
+
+        <androidx.constraintlayout.widget.Group
+            android:id="@+id/search_background_group"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+            app:constraint_referenced_ids="search_background, search_gradient_mask, search_text_field"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.Guideline
+            android:id="@+id/guideline_end_search"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            app:layout_constraintGuide_begin="124dp" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <com.natife.streaming.custom.SideMenu
+        android:id="@+id/mainMenu"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/contentBrowse"
+        tools:layout="@layout/view_side_menu_new" />
+
+    <androidx.leanback.widget.BrowseFrameLayout
+        android:id="@+id/contentBrowse"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/mainMenu"
+        app:layout_constraintTop_toBottomOf="@+id/topLayout"
+        app:layout_goneMarginStart="0dp"
+        app:layout_goneMarginTop="0dp">
+
+        <fragment
+            android:id="@+id/globalNavFragment"
+            android:name="androidx.navigation.fragment.NavHostFragment"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:defaultNavHost="true"
+            app:navGraph="@navigation/nav_main"
+            tools:layout="@layout/fragment_home" />
+    </androidx.leanback.widget.BrowseFrameLayout>
+
+</androidx.constraintlayout.motion.widget.MotionLayout>

@@ -1,0 +1,302 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/custom_control_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_preview"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:iconSize="62dp"
+        app:icon="@drawable/ic_rewind"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toStartOf="@+id/exo_interval_rewind_30"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_interval_rewind_30"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:icon="@drawable/ic_interval_rewind_30"
+        app:iconSize="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toStartOf="@+id/exo_interval_rewind_5"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/exo_preview"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_interval_rewind_5"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:focusable="true"
+        app:icon="@drawable/ic_interval_rewind_5"
+        app:iconSize="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_half"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/exo_interval_rewind_30"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/exo_play"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:iconSize="62dp"
+        android:nextFocusLeft="@drawable/ic_interval_rewind_5"
+        android:nextFocusRight="@drawable/ic_interval_forward_5"
+        app:icon="@drawable/ic_play"
+        app:layout_constraintBottom_toTopOf="@+id/center_max_control_panel_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/center_max_control_panel_guideline"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@id/exo_pause"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:nextFocusLeft="@drawable/ic_interval_rewind_5"
+        android:nextFocusRight="@drawable/ic_interval_forward_5"
+        app:icon="@drawable/ic_pause"
+        app:iconSize="62dp"
+        app:layout_constraintBottom_toTopOf="@+id/center_max_control_panel_guideline"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/center_max_control_panel_guideline"
+        app:strokeWidth="0dp" />
+
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_interval_forward_5"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:focusable="true"
+        app:icon="@drawable/ic_interval_forward_5"
+        app:iconSize="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toStartOf="@+id/exo_interval_forward_30"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/guideline_half"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_interval_forward_30"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:icon="@drawable/ic_interval_forward_30"
+        app:iconSize="62dp"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toStartOf="@+id/exo_next_episode"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/exo_interval_forward_5"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/exo_next_episode"
+        style="@style/ExoStyledControlsCustom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:iconSize="62dp"
+        app:icon="@drawable/ic_fast_forward"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_play"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/exo_interval_forward_30"
+        app:layout_constraintTop_toTopOf="@+id/exo_play"
+        app:strokeWidth="0dp" />
+
+    <!--        <androidx.constraintlayout.widget.ConstraintLayout-->
+    <!--            android:id="@+id/native_progress"-->
+    <!--            android:layout_width="match_parent"-->
+    <!--            android:layout_height="wrap_content"-->
+    <!--            android:layout_marginHorizontal="32dp"-->
+    <!--            android:layout_marginTop="24dp"-->
+    <!--            app:layout_constraintTop_toTopOf="parent"-->
+    <!--            tools:layout_editor_absoluteX="32dp">-->
+
+    <!--            <com.google.android.exoplayer2.ui.DefaultTimeBar-->
+    <!--                android:id="@+id/exo_progress"-->
+    <!--                android:layout_width="match_parent"-->
+    <!--                android:layout_height="26dp"-->
+    <!--                android:layout_weight="1"-->
+    <!--                android:focusable="true"-->
+    <!--                android:nextFocusUp="@+id/menuPlayer"-->
+    <!--                android:progressTint="#EACB6F"-->
+    <!--                android:thumbTint="@color/white"-->
+    <!--                app:layout_constraintStart_toStartOf="parent"-->
+    <!--                app:layout_constraintTop_toTopOf="parent"-->
+    <!--                app:played_color="#EACB6F"-->
+    <!--                app:scrubber_drawable="@drawable/player_seekbar_thumb" />-->
+
+    <!--        </androidx.constraintlayout.widget.ConstraintLayout>-->
+
+
+    <TextView
+        android:id="@+id/bigGameTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline1"
+        android:textStyle="bold"
+        android:visibility="gone"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_duration_video"
+        app:layout_constraintEnd_toStartOf="@+id/exo_position_video"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/exo_duration_video"
+        tools:text="КПРФ-Футзал : Сибиряк Новосибирск" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/sight_of_bottom"
+        style="@style/ExoStyledControlsCustom_sight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        app:icon="@drawable/ic_sight_of_bottom"
+        app:layout_constraintBottom_toBottomOf="@+id/exo_duration_video"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/exo_duration_video"
+        app:strokeWidth="0dp" />
+
+    <TextView
+        android:id="@+id/exo_position_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/slashTextView"
+        app:layout_constraintTop_toTopOf="@+id/slashTextView"
+        tools:text="00:00" />
+
+    <TextView
+        android:id="@+id/slashTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/text_slash"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toStartOf="@+id/exo_duration_video"
+        app:layout_constraintTop_toTopOf="@+id/exo_duration_video" />
+
+    <TextView
+        android:id="@+id/exo_duration_video"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="16dp"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline6"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/player_bottom_bar"
+        app:layout_constraintEnd_toEndOf="@+id/guideline_right_margin"
+        tools:text="00:00" />
+
+    <com.natife.streaming.custom.PlayerBottomBar
+        android:id="@+id/player_bottom_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="48dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <com.natife.streaming.custom.BottomButtonLine
+        android:id="@+id/bottom_button_line_layout"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginBottom="32dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/guideline_right_margin"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/menuPlayer"
+        style="@style/ExoStyledControlsCustom_sight"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:focusable="true"
+        android:visibility="gone"
+        app:icon="@drawable/ic_menu_player"
+        app:iconSize="27dp"
+        app:layout_constraintBottom_toTopOf="@+id/top_mini_control_panel_guideline"
+        app:layout_constraintStart_toStartOf="@+id/guideline_left_margin"
+        app:layout_constraintTop_toTopOf="@+id/top_mini_control_panel_guideline"
+        app:strokeWidth="0dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_half"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/top_mini_control_panel_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_end="150dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/center_max_control_panel_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/left_mini_control_panel_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".32" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/right_mini_control_panel_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent=".68" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_left_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_begin="44dp" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideline_right_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_end="44dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

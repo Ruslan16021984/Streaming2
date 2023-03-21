@@ -1,0 +1,430 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_global"
+    app:startDestination="@id/nav_main">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.natife.streaming.ui.splash.SplashFragment" />
+
+    <navigation
+        android:id="@+id/nav_authorization"
+        app:startDestination="@id/loginFragment">
+
+        <fragment
+            android:id="@+id/loginFragment"
+            android:name="com.natife.streaming.ui.login.LoginFragment"
+            android:label="LoginFragment"
+            tools:layout="@layout/fragment_login_new">
+            <action
+                android:id="@+id/action_loginFragment_to_registerFragment"
+                app:destination="@id/registerFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/registerFragment"
+            android:name="com.natife.streaming.ui.register.RegisterFragment"
+            android:label="fragment_register_new"
+            tools:layout="@layout/fragment_register_new" />
+
+    </navigation>
+
+    <navigation
+        android:id="@+id/nav_main"
+        app:startDestination="@id/homeFragment">
+        <fragment
+            android:id="@+id/homeFragment"
+            android:name="com.natife.streaming.ui.home.HomeFragment"
+            android:label="HomeFragment"
+            tools:layout="@layout/fragment_home">
+            <action
+                android:id="@+id/action_homeFragment_to_calendarFragment"
+                app:destination="@id/calendarFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_popupVideoFragment"
+                app:destination="@id/popupVideo" />
+            <action
+                android:id="@+id/action_homeFragment_to_liveFragment"
+                app:destination="@id/liveFragment" />
+            <action
+                android:id="@+id/action_homeFragment_to_billingFragment"
+                app:destination="@id/billing" />
+            <action android:id="@+id/action_homeFragment_to_liveDialog"
+                app:destination="@+id/liveDialog" />
+            <action android:id="@+id/action_homeFragment_to_preference"
+                app:destination="@+id/preferences" />
+        </fragment>
+        <fragment
+            android:id="@+id/playerFragment"
+            android:name="com.natife.streaming.ui.player.PlayerFragment"
+            android:label="PlayerFragment"
+            tools:layout="@layout/fragment_player">
+            <argument
+                android:name="setup"
+                app:argType="com.natife.streaming.data.player.PlayerSetup" />
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/tournamentFragment"
+            android:name="com.natife.streaming.ui.tournament.TournamentFragment"
+            android:label="TournamentFragment"
+            tools:layout="@layout/fragment_tournament">
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <argument
+                android:name="tournamentId"
+                app:argType="integer" />
+            <argument
+                android:name="type"
+                app:argType="com.natife.streaming.data.search.SearchResult$Type" />
+            <action
+                android:id="@+id/action_tournamentFragment_to_liveDialog"
+                app:destination="@id/liveDialog" />
+            <action
+                android:id="@+id/action_tournamentFragment_to_popupVideo"
+                app:destination="@id/popupVideo" />
+            <action
+                android:id="@+id/action_tournamentFragment_to_billingFragment"
+                app:destination="@id/billing" />
+            <action
+                android:id="@+id/action_tournamentFragment_to_searchFragment"
+                app:destination="@id/searchFragment" />
+        </fragment>
+
+        <fragment
+            android:id="@+id/accountFragment"
+            android:name="com.natife.streaming.ui.account.AccountFragment"
+            android:label="AccountFragment"
+            tools:layout="@layout/fragment_account">
+            <action
+                android:id="@+id/action_accountFragment_to_subscriptionFragment"
+                app:destination="@id/subscriptionFragment" />
+            <action
+                android:id="@+id/action_accountFragment_to_payStoryFragment"
+                app:destination="@id/payStoryFragment" />
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/subscriptionFragment"
+            android:name="com.natife.streaming.ui.subscriptions.SubscriptionsFragment"
+            tools:layout="@layout/subscriptions_fragment" />
+        <action
+            android:id="@+id/action_main_searchFragment"
+            app:destination="@id/searchFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_main_accountFragment"
+            app:destination="@id/accountFragment"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_main_loginFragment"
+            app:destination="@id/loginFragment"
+            app:launchSingleTop="true" />
+        <action
+            android:id="@+id/action_main_homeFragment"
+            app:destination="@id/homeFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_main_favoriteFragment"
+            app:destination="@id/favoritesFragment"
+            app:launchSingleTop="true"
+            app:popUpTo="@id/nav_main"
+            app:popUpToInclusive="true" />
+        <fragment
+            android:id="@+id/calendarFragment"
+            android:name="com.natife.streaming.ui.calendar.CalendarFragment"
+            android:label="CalendarFragment"
+            tools:layout="@layout/fragment_calendar" />
+        <fragment
+            android:id="@+id/searchFragment"
+            android:name="com.natife.streaming.ui.search.SearchFragment"
+            android:label="SearchFragment"
+            tools:layout="@layout/fragment_search_new">
+            <action
+                android:id="@+id/action_searchFragment_to_tournamentFragment"
+                app:destination="@id/tournamentFragment" />
+        </fragment>
+        <fragment
+            android:id="@+id/favoritesFragment"
+            android:name="com.natife.streaming.ui.favorites.FavoritesFragment"
+            android:label="FavoritesFragment"
+            tools:layout="@layout/fragment_favorites_new">
+            <action
+                android:id="@+id/action_favoritesFragment_to_tournamentFragment"
+                app:destination="@id/tournamentFragment" />
+            <action
+                android:id="@+id/action_favoritesFragment_to_popupVideo"
+                app:destination="@id/popupVideo" />
+            <action
+                android:id="@+id/action_favoritesFragment_to_billingFragment"
+                app:destination="@id/billing" />
+            <action
+                android:id="@+id/action_favoritesFragment_to_liveDialog"
+                app:destination="@id/liveDialog" />
+            <action
+                android:id="@+id/action_favoritesFragment_to_calendarFragment"
+                app:destination="@id/calendarFragment" />
+            <action android:id="@+id/action_favoritesFragment_to_preference"
+                app:destination="@+id/preferences" />
+        </fragment>
+        <navigation
+            android:id="@+id/popupVideo"
+            app:startDestination="@id/popupVideoFragment">
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <fragment
+                android:id="@+id/tabMatchEventsFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.matchivents.TabMatchEventsFragment"
+                android:label="fragment_tab_match_events"
+                tools:layout="@layout/fragment_tab_match_events" />
+            <fragment
+                android:id="@+id/tabWatchFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.watch.TabWatchFragment"
+                android:label="fragment_tab_watch"
+                tools:layout="@layout/fragment_tab_watch" />
+            <fragment
+                android:id="@+id/popupVideoFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.PopupVideoFragment"
+                android:label="fragment_popup_video"
+                tools:layout="@layout/fragment_popup_video">
+                <argument
+                    android:name="matchId"
+                    app:argType="integer" />
+                <argument
+                    android:name="sportId"
+                    app:argType="integer" />
+                <action
+                    android:id="@+id/action_popupVideoFragment_to_popupStatisticsFragment"
+                    app:destination="@id/popupStatisticsFragment" />
+                <action
+                    android:id="@+id/action_popupVideoFragment_to_tournamentFragment"
+                    app:destination="@id/tournamentFragment" />
+            </fragment>
+            <fragment
+                android:id="@+id/tabByPlayersFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.byplayers.TabByPlayersFragment"
+                android:label="fragment_tab_by_players"
+                tools:layout="@layout/fragment_tab_by_players" />
+            <fragment
+                android:id="@+id/tabLanguagesFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.langues.TabLanguagesFragment"
+                android:label="fragment_tab_languages"
+                tools:layout="@layout/fragment_tab_languages" />
+            <fragment
+                android:id="@+id/tabAdditionallyFragment"
+                android:name="com.natife.streaming.ui.popupmatch.video.additionaly.TabAdditionallyFragment"
+                android:label="fragment_tab_additionally"
+                tools:layout="@layout/fragment_tab_additionally" />
+            <fragment
+                android:id="@+id/popupStatisticsFragment"
+                android:name="com.natife.streaming.ui.popupmatch.statistics.PopupStatisticsFragment"
+                android:label="PopupStatisticsFragment">
+                <argument
+                    android:name="matchId"
+                    app:argType="integer" />
+                <argument
+                    android:name="sportId"
+                    app:argType="integer" />
+                <action
+                    android:id="@+id/action_popupStatisticsFragment_to_popupVideoFragment"
+                    app:destination="@id/popupVideoFragment" />
+            </fragment>
+            <fragment
+                android:id="@+id/commandsFragment"
+                android:name="com.natife.streaming.ui.popupmatch.statistics.commands.TabCommandsFragment"
+                android:label="fragment_tab_commands"
+                tools:layout="@layout/fragment_tab_commands" />
+            <fragment
+                android:id="@+id/tabTableFragment"
+                android:name="com.natife.streaming.ui.popupmatch.statistics.table.TabTableFragment"
+                android:label="fragment_tab_table"
+                tools:layout="@layout/fragment_tab_table" />
+            <action
+                android:id="@+id/action_global_playerFragment"
+                app:destination="@id/playerFragment" />
+            <fragment
+                android:id="@+id/tabTeam1Fragment"
+                android:name="com.natife.streaming.ui.popupmatch.statistics.team.TabTeam1Fragment"
+                android:label="TabTeam1Fragment" />
+            <fragment
+                android:id="@+id/tabTeam2Fragment"
+                android:name="com.natife.streaming.ui.popupmatch.statistics.team.TabTeam2Fragment"
+                android:label="TabTeam2Fragment" />
+        </navigation>
+        <fragment
+            android:id="@+id/searchResultFragment"
+            android:name="com.natife.streaming.ui.search.SearchResultFragment"
+            android:label="fragment_search_result"
+            tools:layout="@layout/fragment_search_result" />
+        <fragment
+            android:id="@+id/liveFragment"
+            android:name="com.natife.streaming.ui.live.LiveFragment"
+            android:label="fragment_live"
+            tools:layout="@layout/fragment_live">
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <argument
+                android:name="title"
+                app:argType="string" />
+            <argument
+                android:name="watchType"
+                app:argType="string" />
+        </fragment>
+        <fragment
+            android:id="@+id/payStoryFragment"
+            android:name="com.natife.streaming.ui.payStory.PayStoryFragment"
+            android:label="fragment_pay_story"
+            tools:layout="@layout/fragment_pay_story" />
+
+        <navigation
+            android:id="@+id/billing"
+            app:startDestination="@id/billingFragment">
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <argument
+                android:name="tournamentId"
+                app:argType="integer" />
+            <argument
+                android:name="tournamentTitle"
+                app:argType="string" />
+            <argument
+                android:name="live"
+                android:defaultValue="false"
+                app:argType="boolean" />
+            <argument
+                android:name="team1"
+                app:argType="string" />
+            <argument
+                android:name="team2"
+                app:argType="string" />
+            <fragment
+                android:id="@+id/billingFragment"
+                android:name="com.natife.streaming.ui.billing.BillingFragment"
+                android:label="fragment_billing"
+                tools:layout="@layout/fragment_billing">
+                <argument
+                    android:name="matchId"
+                    app:argType="integer" />
+                <argument
+                    android:name="sportId"
+                    app:argType="integer" />
+                <argument
+                    android:name="tournamentId"
+                    app:argType="integer" />
+                <argument
+                    android:name="tournamentTitle"
+                    app:argType="string" />
+                <argument
+                    android:name="live"
+                    android:defaultValue="false"
+                    app:argType="boolean" />
+                <argument
+                    android:name="team1"
+                    app:argType="string" />
+                <argument
+                    android:name="team2"
+                    app:argType="string" />
+                <action
+                    android:id="@+id/action_billingFragment_to_popupVideo"
+                    app:destination="@id/popupVideo"
+                    app:popUpTo="@id/billingFragment"
+                    app:popUpToInclusive="true" />
+                <action
+                    android:id="@+id/action_billingFragment_to_liveDialog"
+                    app:destination="@id/liveDialog"
+                    app:popUpTo="@id/billingFragment"
+                    app:popUpToInclusive="true" />
+            </fragment>
+            <fragment
+                android:id="@+id/billingTypeListFragment"
+                android:name="com.natife.streaming.ui.billing.BillingTypeListFragment"
+                android:label="BillingTypeListFragment" />
+        </navigation>
+        <dialog
+            android:id="@+id/liveDialog"
+            android:name="com.natife.streaming.ui.live.LiveDialog"
+            android:label="LiveDialog" >
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <argument
+                android:name="title"
+                app:argType="string" />
+        </dialog>
+        <dialog
+            android:id="@+id/liveDialogNew"
+            android:name="com.natife.streaming.ui.live.LiveDialogNew"
+            android:label="LiveDialogNew" >
+            <argument
+                android:name="matchId"
+                app:argType="integer" />
+            <argument
+                android:name="sportId"
+                app:argType="integer" />
+            <argument
+                android:name="title"
+                app:argType="string" />
+        </dialog>
+        <navigation
+            android:id="@+id/preferences"
+            app:startDestination="@id/mypreferencesFragment">
+            <argument
+                android:name="navId"
+                app:argType="integer" />
+            <fragment
+                android:id="@+id/mypreferencesFragment"
+                android:name="com.natife.streaming.ui.mypreferences.UserPreferencesFragment"
+                android:label="PreferencesFragment" >
+            </fragment>
+        </navigation>
+    </navigation>
+
+
+
+    <action
+        android:id="@+id/action_global_nav_auth"
+        app:destination="@id/nav_authorization"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/nav_global" />
+
+    <action
+        android:id="@+id/action_global_nav_main"
+        app:destination="@id/nav_main"
+        app:launchSingleTop="true"
+        app:popUpTo="@id/nav_global" />
+
+    <action
+        android:id="@+id/action_global_preferences"
+        app:destination="@id/preferences"
+        app:launchSingleTop="false"
+        app:popUpTo="@id/nav_global" />
+</navigation>

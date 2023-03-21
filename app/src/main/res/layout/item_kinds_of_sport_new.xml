@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/sport_item"
+    android:layout_width="223dp"
+    android:layout_marginHorizontal="10dp"
+    android:layout_height="wrap_content"
+    android:background="@drawable/round_background_t_w_state_selected"
+    android:focusable="true">
+
+
+    <TextView
+        android:id="@+id/sport_name_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="11dp"
+        android:layout_marginTop="6dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="6dp"
+        android:duplicateParentState="true"
+        android:maxLines="1"
+        android:textAppearance="@style/TextAppearance.StreamingTheme.Headline4"
+        android:textColor="@color/button_text_b_w_state_selected"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/check_image"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_goneMarginEnd="38dp"
+        tools:text="Американский футбол" />
+
+    <ImageView
+        android:id="@+id/check_image"
+        android:layout_width="22dp"
+        android:layout_height="20dp"
+        android:layout_marginEnd="11dp"
+        android:layout_marginBottom="1dp"
+        android:duplicateParentState="true"
+        android:visibility="visible"
+        app:layout_constraintBottom_toBottomOf="@+id/sport_name_text"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/sport_name_text"
+        app:srcCompat="@drawable/ic_check_ok_b_w_selected"
+        tools:ignore="contentDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
